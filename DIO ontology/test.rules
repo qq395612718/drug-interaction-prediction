@@ -1,0 +1,13 @@
+@prefix fa: <http://www.owl-ontologies.com/drug_action.owl.owl#>.
+@include <RDFS>.
+@include <OWL>.
+
+[rule1:(?x http://www.owl-ontologies.com/drug_action.owl#Similar ?y)(?x http://www.owl-ontologies.com/drug_action.owl#Inducer ?z)->(?y http://www.owl-ontologies.com/drug_action.owl#Inducer ?z)]
+[rule2:(?x http://www.owl-ontologies.com/drug_action.owl#Similar ?y)(?x http://www.owl-ontologies.com/drug_action.owl#Inhibitor ?z)->(?y http://www.owl-ontologies.com/drug_action.owl#Inhibitor ?z)]
+[rule3:(?x http://www.owl-ontologies.com/drug_action.owl#Similar ?y)(?x http://www.owl-ontologies.com/drug_action.owl#Substrate ?z)->(?y http://www.owl-ontologies.com/drug_action.owl#Substrate ?z)]
+[rule4:(?x http://www.owl-ontologies.com/drug_action.owl#Inducer ?z)(?y http://www.owl-ontologies.com/drug_action.owl#Inducer ?z)->(?x http://www.owl-ontologies.com/drug_action.owl#Interact ?y)]
+[rule5:(?x http://www.owl-ontologies.com/drug_action.owl#Inducer ?z)(?y http://www.owl-ontologies.com/drug_action.owl#Inhibitor ?z)->(?x http://www.owl-ontologies.com/drug_action.owl#Interact ?y)]
+[rule6:(?x http://www.owl-ontologies.com/drug_action.owl#Inducer ?z)(?y http://www.owl-ontologies.com/drug_action.owl#Substrate ?z)->(?x http://www.owl-ontologies.com/drug_action.owl#Interact ?y)]
+[rule7:(?x http://www.owl-ontologies.com/drug_action.owl#Inhibitor ?z)(?y http://www.owl-ontologies.com/drug_action.owl#Inhibitor ?z)->(?x http://www.owl-ontologies.com/drug_action.owl#Interact ?y)]
+[rule8:(?x http://www.owl-ontologies.com/drug_action.owl#Inhibitor ?z)(?y http://www.owl-ontologies.com/drug_action.owl#Substrate ?z)->(?x http://www.owl-ontologies.com/drug_action.owl#Interact ?y)]
+[rule9:(?x http://www.owl-ontologies.com/drug_action.owl#Substrate ?z)(?y http://www.owl-ontologies.com/drug_action.owl#Substrate ?z)->(?x http://www.owl-ontologies.com/drug_action.owl#Interact ?y)]
